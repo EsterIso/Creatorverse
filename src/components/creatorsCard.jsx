@@ -5,11 +5,22 @@ function Card({ data }) {
   const navigate = useNavigate();
   const handleEdit = async (e) => {
     const creatorID = data.id;
-    navigate(`/editCreator?id=${creatorID}`)
+    navigate(`/editCreator?id=${creatorID}`);
   }
 
+  const viewCreator = async (e) => {
+     const creatorID = data.id;
+    navigate(`/viewCreator?id=${creatorID}`);
+  }
+
+  const handleCardClick = (e) => {
+    // Only navigate if the click wasn't on a button or link
+    if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'A' && !e.target.closest('button, a')) {
+      viewCreator(e);
+    }
+  }
   return (
-    <div className="card" style={{ backgroundImage: `url(${data.imageURL})` }}>
+    <div className="card" style={{ backgroundImage: `url(${data.imageURL})` }} onClick={handleCardClick}>
       <div className="card-content">
         <h3>{data.name}</h3>
         <a href={data.url}><img src="/images/youtube-icon.png" alt="YouTube" /></a>
