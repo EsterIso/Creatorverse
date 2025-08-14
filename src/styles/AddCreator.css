@@ -1,0 +1,83 @@
+
+
+.page-title {
+    font-weight: bold;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.addCreator-form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 30%;
+    margin: 40px auto;
+    background-color: #141414;
+    border-radius: 10px;
+    border: 2px solid #0082c8;
+    padding: 2rem; 
+}
+
+.addCreator-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.addCreator-form label {
+    margin-bottom: 0.5rem;
+}
+
+.addCreator-form input, textarea {
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    overflow-y: auto;
+    resize: vertical;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+#name-section, #description-section, #image-section, #URL-section {
+    text-align: left;
+    margin: 8px;
+}
+
+#name-section:focus-within, #description-section:focus-within, #image-section:focus-within, #URL-section:focus-within {
+    color:#0082c8;
+}
+
+.addCreator-form input:focus, textarea:focus {
+    border-color: #0082c8;
+    box-shadow: 0px 0px 12px rgba(102, 125, 182, .9);
+    outline: none;
+}
+
+.addCreator-form button {
+    margin-top: 5px;
+    width: 30%;
+    font-size: medium;
+    align-self: center;
+    color: aliceblue;
+    background-color: #0082c8;
+}
+
+#button-section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+}
+
+.addCreator-form .delButton {
+    background-color: #F54927;
+}
+
