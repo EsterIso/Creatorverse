@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { supabase } from '../client.js'
 import { useNavigate } from "react-router-dom";
 function ViewCreator () {
 
     const [searchParams] = useSearchParams();
-    const creatorID = searchParams.get('id');
+    const {id} = useParams();
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
             name: '',
@@ -16,14 +16,14 @@ function ViewCreator () {
         });
 
     const handleEdit = async (e) => {
-        navigate(`/editCreator?id=${creatorID}`);
+        navigate(`/editCreator/${id}`);
     }
     useEffect(() => {
             const fetchCreator = async () => {
                 const { data, error } = await supabase  // Don't forget to destructure 'error'
                     .from('creators')
                     .select('*')
-                    .eq('id', creatorID)
+                    .eq('id', id)
                     .single();
     
                 if (error) {
@@ -39,10 +39,10 @@ function ViewCreator () {
                 }
             };
     
-            if (creatorID) {
+            if (id) {
                 fetchCreator();
             }
-        }, [creatorID]);
+        }, [id]);
 
     return (
         <div>

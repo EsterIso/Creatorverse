@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import UpdateCreator from '../supabase/UpdateCreator.js';
 import DelCreator from '../supabase/DelCreator.js';
@@ -9,7 +9,7 @@ import '../styles/AddCreator.css'
 
 function EditCreator() {  // Remove async
     const [searchParams] = useSearchParams();
-    const creatorID = searchParams.get('id');
+    const {id} = useParams();
 
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -33,7 +33,7 @@ function EditCreator() {  // Remove async
             const { data, error } = await supabase  // Don't forget to destructure 'error'
                 .from('creators')
                 .select('*')
-                .eq('id', creatorID)
+                .eq('id', id)
                 .single();
 
             if (error) {
@@ -49,18 +49,18 @@ function EditCreator() {  // Remove async
             }
         };
 
-        if (creatorID) {
+        if (id) {
             fetchCreator();
         }
-    }, [creatorID]);
+    }, [id]);
 
 
     const handleSubmit = async (e) =>{
       e.preventDefault();
 
       try{
-        const data = { ...formData, id: creatorID };
-        const result = await UpdateCreator( creatorID, data);
+        const data = { ...formData, id: id };
+        const result = await UpdateCreator(id, data);
 
         console.log(result);
         navigate('/');
@@ -71,7 +71,7 @@ function EditCreator() {  // Remove async
 
     const handleDel = async (e) =>{
       try {
-        const result = await DelCreator(creatorID);
+        const result = await DelCreator(id);
 
         console.log(result)
         navigate('/');

@@ -5,12 +5,12 @@ function Card({ data }) {
   const navigate = useNavigate();
   const handleEdit = async (e) => {
     const creatorID = data.id;
-    navigate(`/editCreator?id=${creatorID}`);
+    navigate(`/editCreator/${creatorID}`);
   }
 
   const viewCreator = async (e) => {
      const creatorID = data.id;
-    navigate(`/viewCreator?id=${creatorID}`);
+    navigate(`/viewCreator/${creatorID}`);
   }
 
   const handleCardClick = (e) => {
