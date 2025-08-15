@@ -31,10 +31,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://i.imgur.com/ZA4IfOR.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿<img src='https://private-user-images.githubusercontent.com/165116499/478262445-83c5117a-ba0c-4903-b23d-6e1f62c12e91.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUyMTgxNzQsIm5iZiI6MTc1NTIxNzg3NCwicGF0aCI6Ii8xNjUxMTY0OTkvNDc4MjYyNDQ1LTgzYzUxMTdhLWJhMGMtNDkwMy1iMjNkLTZlMWY2MmMxMmU5MS5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNVQwMDMxMTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mZTU5YjA5NDMwNzNmMGRjZDMxYTMxMmUyODk2OThkZmY4NzI5M2I2ZDFjN2MwZmExMjJkMTZlMGYyMTBlNzI2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.AnPgznv_20IXAAc_pruk82nSQlr5aAJBJ9TTKDpYWEk' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-
-GIF created with ...  IMGUR
 
 ## License
 
